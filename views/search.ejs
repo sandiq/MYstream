@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+  <title>MYstream — Search Movie, Tv</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Situs Nonton Film favorit kamu.">
+  <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
+  <meta name="author" content="NdyZz">
+  <meta property="og:site_name" name="og:site_name" content="MYstream">
+  <meta property="og:title" name="og:title" content="MYstream — Search Movie, TV">
+  <meta property="og:url" name="og:url" content="https://mystream.my.id">
+  <meta property="og:image" name="og:image" content="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta property="og:description" name="og:description" content="Situs Nonton Film favorit kamu.">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="shortcut icon" type="image/x-icon" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #ff00ff;
+            --dark-bg: #0a0a0f;
+            --darker-bg: #05050a;
+            --card-bg: #141422;
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8c8;
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            --gradient-1: linear-gradient(135deg, #00d4ff, #ff00ff);
+            --gradient-2: linear-gradient(135deg, #ff00ff, #00d4ff);
+            --success-color: #00ff88;
+            --warning-color: #ffaa00;
+            --error-color: #ff4444;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-30px, -30px) rotate(120deg); }
+            66% { transform: translate(30px, -20px) rotate(240deg); }
+        }
+
+        /* Header */
+        .header {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: none; /* Hide on mobile by default */
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Search Container */
+        .search-container {
+            margin: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 800px;
+            padding: 1rem;
+            background: rgba(20, 20, 34, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        /* Results Container */
+        .results-container {
+            margin: 1rem auto;
+            max-width: 1200px;
+            padding: 0 1rem;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-title {
+            font-size: 1.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .results-count {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Card */
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .card-image {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .card-rating {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--success-color);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .card-btn {
+            flex: 1;
+            background: var(--gradient-1);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .card-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .pagination-btn {
+            background: rgba(20, 20, 34, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .pagination-btn:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination-btn.active {
+            background: var(--gradient-1);
+            border-color: transparent;
+        }
+
+        .pagination-info {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            border: 3px solid rgba(0, 212, 255, 0.3);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Footer */
+        footer {
+            margin: 3rem 0 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .results-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .results-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .card-description {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-input {
+                max-width: 100%;
+            }
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .space {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            MYstream
+        </div>
+        <div class="menu-toggle">
+            <a href="/" style="text-decoration:none;color: var(--text-primary)"><i class="fas fa-arrow-left"> Kembali</i></a>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Cari film, serial, atau acara TV..." 
+            value="<%= query || '' %>"
+            id="searchInput"
+        >
+    </div>
+
+    <div class="results-container">
+        <% if (results && results.length > 0) { %>
+            <div class="results-header">
+                <h2 class="results-title">Hasil Pencarian untuk "<%= query %>"</h2>
+                <div class="results-count"><%= results.length %> hasil ditemukan</div>
+            </div>
+            
+            <div class="results-grid">
+                <% results.forEach(item => { %>
+                    <div class="card" data-id="<%= item.id %>" data-type="<%= item.media_type %>">
+                        <div class="card-image">
+                            <img src="<%= item.poster_path ? `https:\/\/image.tmdb.org\/t\/p\/original\/${item.poster_path}?w=828&q=70` : 'https:\/\/s6.imgcdn.dev\/YTZpg0.png' %>" alt="<%= item.title || '-'%>">
+                            <div class="card-badge"><%= item.media_type === 'movie' ? 'Film' : item.media_type === 'person' ? 'Person' : 'Serial TV' %></div>
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <%= item.popularity || 0 %>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><%= item?.title || '-'%></h3>
+                            <div class="card-meta">
+                                <span><%= item?.release_date || '-'%></span>
+                                <span>•</span>
+                                <span><%= item?.genres %></span>
+                            </div>
+                            <p class="card-description"><%= item.overview %></p>
+                            <div class="card-footer">
+                                <button class="card-btn">
+                                    <i class="fas fa-play"></i>
+                                    Nonton
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+            <!-- Pagination -->
+            <% if (total_pages > 1) { %>
+                <div class="pagination">
+                    <button class="pagination-btn" id="prevPage" <%= currentPage === 1 ? 'disabled' : '' %>>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <% for (let i = 1; i <= total_pages; i++) { %>
+                        <% if (i === 1 || i === total_pages || (i >= currentPage - 1 && i <= currentPage + 1)) { %>
+                            <button class="pagination-btn <%= i === currentPage ? 'active' : '' %>" data-page="<%= i %>">
+                                <%= i %>
+                            </button>
+                        <% } else if (i === currentPage - 2 || i === currentPage + 2) { %>
+                            <span class="pagination-info">...</span>
+                        <% } %>
+                    <% } %>
+                    
+                    <button class="pagination-btn" id="nextPage" <%= currentPage === total_pages ? 'disabled' : '' %>>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            <% } %>
+       <% } else if (query) { %>
+            <div class="no-results">
+                <i class="fas fa-search no-results-icon"></i>
+                <h3>Tidak ada hasil ditemukan</h3>
+                <p>Coba kata kunci lain untuk "<%= query %>"</p>
+            </div>
+        <% } else { %>
+            <div class="no-results">
+                <i class="fas fa-search no-results-icon"></i>
+                <h3>Mulai Mencari</h3>
+                <p>Masukkan kata kunci di atas untuk mencari film atau serial TV</p>
+            </div>
+        <% } %>
+    </div>
+
+    <footer>
+      © <strong>MYstream</strong> — All rights reserved. 
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const resultsContainer = document.querySelector('.results-container');
+            
+            // Handle search input
+            searchInput.addEventListener('input', function() {
+                const query = this.value.trim();
+                if (query.length > 2) {
+                    // In a real application, you would make an API call here
+                    // For now, we'll just update the URL
+                    window.history.pushState({}, '', `/film/search?query=${encodeURIComponent(query)}`);
+                    // You would typically fetch new results here
+                }
+            });
+            
+            // Handle card clicks
+            document.addEventListener('click', function(e) {
+                const card = e.target.closest('.card');
+                if (card) {
+                    const id = card.dataset.id;
+                    const type = card.dataset.type;
+                    if (type == 'person') return
+                    // Navigate to the detail page
+                    window.location.href = `/watch/${type}/${id}/1/1`;
+                }
+            });
+            
+            // Handle Enter key in search input
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const query = this.value.trim();
+                    if (query.length > 0) {
+                        window.location.href = `/film/search?query=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

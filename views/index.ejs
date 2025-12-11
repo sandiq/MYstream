@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>MYstream — Film: Movie, TV</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Situs Nonton Film favorit kamu.">
+  <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
+  <meta name="author" content="NdyZz">
+  <meta property="og:site_name" name="og:site_name" content="MYstream">
+  <meta property="og:title" name="og:title" content="MYstream — Film: Movie, TV">
+  <meta property="og:url" name="og:url" content="https://mystream.my.id">
+  <meta property="og:image" name="og:image" content="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta property="og:description" name="og:description" content="Situs Nonton Film favorit kamu.">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="shortcut icon" type="image/x-icon" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://s6.imgcdn.dev/YTZpg0.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0a0a0f;
+      --bg-2:#05050a;
+      --accent:#3aa0ff;
+      --muted:#9fb7d8;
+      --card:#141422;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --gap:18px;
+      --max-width:1200px;
+      --primary-color: #00d4ff;
+            --secondary-color: #ff00ff;
+            --dark-bg: #0a0a0f;
+            --darker-bg: #05050a;
+            --card-bg: #141422;
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8c8;
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            --gradient-1: linear-gradient(135deg, #00d4ff, #ff00ff);
+            --gradient-2: linear-gradient(135deg, #ff00ff, #00d4ff);
+            --success-color: #00ff88;
+            --warning-color: #ffaa00;
+            --error-color: #ff4444;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Segoe UI",Inter,system-ui,-apple-system,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,var(--bg),var(--bg-2));
+      color:#eaf3ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.35;
+    }
+    
+            .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-30px, -30px) rotate(120deg); }
+            66% { transform: translate(30px, -20px) rotate(240deg); }
+        }
+
+    .site{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+            .header {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: none; /* Hide on mobile by default */
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    .search{margin-left:12px;position:relative}
+    .search input{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:999px;color:var(--muted);width:220px}
+
+    .mobile-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:20px}
+
+    .hero{position:relative;margin-top:18px;border-radius:18px;overflow:hidden}
+    .hero__slides{display:flex;transition:transform 0.6s ease;will-change:transform}
+    .hero__slide{min-width:100%;display:grid;grid-template-columns:1fr 420px;gap:30px;padding:48px;align-items:end;background-size:cover;background-position:center}
+    .hero__content{max-width:680px}
+    .badge{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:700;margin-bottom:12px}
+    .title{font-size:36px;margin:6px 0 8px}
+    .desc{color:var(--muted);max-width:55%}
+    .hero__poster{align-self:end}
+    .hero .controls{position:absolute;left:16px;right:16px;bottom:18px;display:flex;justify-content:space-between;align-items:center}
+    .hero .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.12);margin:0 6px}
+    .hero .dot.active{background:var(--accent)}
+
+    .row{margin-top:28px}
+    .row h3{margin:0 0 12px 12px;font-size:18px}
+    .row__list{display:flex;gap:12px;overflow:auto;padding:12px;border-radius:12px}
+    .card{min-width:160px;flex:0 0 auto;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));overflow:hidden;position:relative;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+    .card img{display:block;width:100%;height:240px;object-fit:cover}
+    .card .meta{padding:10px}
+    .card:hover{transform:translateY(-8px);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+    .scroller-controls{display:flex;gap:8px;align-items:center}
+    .btn{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer}
+
+    .modal{position:fixed;inset:0;background:rgba(2,6,12,0.6);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s}
+    .modal.open{opacity:1;pointer-events:auto}
+    .modal__box{width:min(900px,95%);background:linear-gradient(180deg, rgba(10,26,44,0.9), rgba(4,10,20,0.95));padding:18px;border-radius:14px}
+    .modal__close{position:absolute;right:22px;top:18px;background:transparent;border:0;color:var(--muted);font-size:20px}
+
+    footer{margin:40px 0 80px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:1000px){
+      .hero__slide{grid-template-columns:1fr 320px;padding:28px}
+      .title{font-size:30px}
+      .card img{height:200px}
+    }
+    @media (max-width:800px){
+      nav{display:none}
+      .mobile-toggle{display:block}
+      .search input{width:140px}
+      .hero__slide{grid-template-columns:1fr;padding:18px;grid-auto-rows:auto}
+      .hero__poster{display:none}
+      .title{font-size:22px}
+      .desc{max-width:100%}
+      .card img{height:150px}
+      .row__list{padding:8px}
+    }
+    @media (max-width:480px){
+      .card{min-width:130px}
+      .site{padding:12px}
+    }
+
+    .flex{display:flex;align-items:center}
+    .space{flex:1}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <div class="animated-bg"></div>
+    
+    <header style="color: #ffffff;" class="header">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            MYstream
+        </div>
+        <div class="search">
+            <input type="text" id="search" placeholder="Cari film...">
+            <button id="btnSearch" type="button" class="btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- HERO / Carousel -->
+    <section class="hero swiper">
+  <div class="swiper-wrapper">
+    <% dataStream.slice(0,5).reverse().forEach((item, idx) => { %>
+      <div class="swiper-slide hero__slide"
+     data-id="<%= item.ids.imdb || item.ids.tmdb %>"
+     data-title="<%= item.title %>"
+     data-year="<%= item.year %>"
+     data-tagline="<%= item.tagline %>"
+     data-desc="<%= item.overview %>"
+     data-poster="<%= 'https:\/\/' + item.images.poster[0] %>"
+     data-type="movie"
+     style="background: linear-gradient(180deg, rgba(3,12,28,0.25), rgba(3,12,28,0.25)), 
+                url(<%= 'https:\/\/' + item.images.thumb[0] %>) center/cover no-repeat">
+        <!-- hero content -->
+        <div class="hero__content">
+          <div class="badge"><%= item.genres.join(' - ') %></div>
+
+          <div class="title">
+            <%= item.title %>
+            <span style="font-weight:500;color:var(--muted);font-size:16px">
+              (<%= item.year %>)
+            </span>
+          </div>
+
+          <div class="desc" data-desc='<%= item.overview %>'><%= item.tagline %></div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;margin-left:60%;z-index:1000;">
+            <a style="text-align: center;text-decoration: none;" class="btn" href="/watch/movie/<%= item.ids.imdb || item.ids.tmdb %>/1/1">▶ Play</a>
+            <button class="btn" data-action="details" data-id="<%= item.ids.imdb || item.ids.tmdb %>">ℹ Detail</button>
+          </div>
+        </div>
+
+        <div class="hero__poster">
+          <img src="<%= 'https:\/\/'+item.images.poster[0] %>" style="width:280px;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.6)">
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination dots"></div>
+
+  <!-- Buttons -->
+  <div class="controls" style="z-index:40;">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="scroller-controls">
+          <div class="btn prevHero"><</div>
+          <div class="btn nextHero">></div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+    <!-- Rows -->
+    <section class="row">
+      <h3>recommendation <a style="color: blue;text-decoration: none;" href="#"><span>></span></a></h3>
+      <div class="row__list" id="row-sliders" tabindex="0">
+  <% dataStream.reverse().forEach(item => { %>
+    <div class="card" data-id="<%= item.ids.imdb || item.ids.tmdb %>"
+     data-title="<%= item.title %>"
+     data-year="<%= item.year %>"
+     data-tagline="<%= item.tagline %>"
+     data-desc="<%= item.overview %>"
+     data-poster="<%= 'https:\/\/' + item.images.poster[0] %>"
+     data-type="movie">
+      <img src="<%= 'https:\/\/' + (item.images.thumb[0] || item.images.poster[0]) %>" alt="<%= item.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.genres.join(' - ') %> • <%= item.year %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+      </div>
+    </section>
+
+    <section class="row">
+      <h3>New <a style="color: blue;text-decoration: none;" href="#"><span>></span></a></h3>
+      <div class="row__list" id="row-new" tabindex="0">
+        <% dataStream.slice(0,30).reverse().forEach(item => { %>
+    <div class="card" data-id="<%= item.ids.imdb || item.ids.tmdb %>"
+     data-title="<%= item.title %>"
+     data-year="<%= item.year %>"
+     data-tagline="<%= item.tagline %>"
+     data-desc="<%= item.overview %>"
+     data-poster="<%= 'https:\/\/' + item.images.poster[0] %>"
+     data-type="movie">
+      <img src="<%= 'https:\/\/' + (item.images.thumb[0] || item.images.poster[0]) %>" alt="<%= item.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.genres.join(' - ') %> • <%= item.year %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+      </div>
+    </section>
+
+    <section class="row">
+      <h3>Movie <a style="color: blue;text-decoration: none;" href="#"><span>></span></a></h3>
+      <div class="row__list" id="row-movie" tabindex="0">
+                <% dataStream.reverse().forEach(item => { %>
+    <div class="card" data-id="<%= item.ids.imdb || item.ids.tmdb %>"
+     data-title="<%= item.title %>"
+     data-year="<%= item.year %>"
+     data-tagline="<%= item.tagline %>"
+     data-desc="<%= item.overview %>"
+     data-poster="<%= 'https:\/\/' + item.images.poster[0] %>"
+     data-type="movie">
+      <img src="<%= 'https:\/\/' + (item.images.thumb[0] || item.images.poster[0]) %>" alt="<%= item.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.genres.join(' - ') %> • <%= item.year %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+      </div>
+    </section>
+    
+    <section class="row">
+      <h3>Tv <a style="color: blue;text-decoration: none;" href="#"><span>></span></a></h3>
+      <div class="row__list" id="row-tv" tabindex="0">
+                <% showsStream.forEach(item => { %>
+    <div class="card" data-id="<%= item.ids.tmdb %>"
+     data-title="<%= item.title %>"
+     data-year="<%= item.year %>"
+     data-tagline="<%= item.tagline %>"
+     data-desc="<%= item.overview %>"
+     data-poster="<%= 'https:\/\/' + item.images.poster[0] %>"
+     data-type="tv">
+      <img src="<%= 'https:\/\/' + (item.images.thumb[0] || item.images.poster[0]) %>" alt="<%= item.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.genres.join(' - ') %> • <%= item.year %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+      </div>
+    </section>
+    
+    <section class="row">
+      <h3>Populate <a style="color: blue;text-decoration: none;" href="#"><span>></span></a></h3>
+      <div class="row__list" id="row-populate" tabindex="0">
+        <% populateStream.forEach(item=> { %>
+        <% if (item?.movie) {%> 
+    <div class="card" data-id="<%= item.movie.ids.imdb || item.movie.ids.tmdb %>"
+     data-title="<%= item.movie.title %>"
+     data-year="<%= item.movie.year %>"
+     data-tagline="<%= item.movie.tagline %>"
+     data-desc="<%= item.movie.overview %>"
+     data-poster="<%= 'https:\/\/' + item.movie.images.poster[0] %>"
+      data-type="movie">
+      <img src="<%= 'https:\/\/' + (item.movie.images.thumb[0] || item.movie.images.poster[0]) %>" alt="<%= item.movie.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.movie.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.movie.genres.join(' - ') %> • <%= item.movie.year %>
+        </div>
+      </div>
+    </div>
+    <% } else { %>
+      <div class="card" data-id="<%= item.show.ids.tmdb %>"
+     data-title="<%= item.show.title %>"
+     data-year="<%= item.show.year %>"
+     data-tagline="<%= item.show.tagline %>"
+     data-desc="<%= item.show.overview %>"
+     data-poster="<%= 'https:\/\/' + item.show.images.poster[0] %>"
+      data-type="tv">
+      <img src="<%= 'https:\/\/' + (item.show.images.thumb[0] || item.show.images.poster[0]) %>" alt="<%= item.show.title %> poster">
+      <div class="meta">
+        <div style="font-weight:700"><%= item.show.title %></div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">
+          <%= item.show.genres.join(' - ') %> • <%= item.show.year %>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  <% }) %>
+      </div>
+    </section>
+
+    <!-- Modal for details / trailer -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" id="closeModal">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <footer>
+      © <strong>MYstream</strong> — All rights reserved. 
+    </footer>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    let navOpen = false;
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navOpen = !navOpen;
+            navLinks.style.display = navOpen ? 'flex' : 'none';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '70px';
+            navLinks.style.right = '20px';
+            navLinks.style.background = 'rgba(0,0,0,0.6)';
+            navLinks.style.padding = '12px 18px';
+            navLinks.style.borderRadius = '10px';
+            navLinks.style.backdropFilter = 'blur(8px)';
+            navLinks.style.zIndex = '1000';
+        });
+    }
+
+    // Initialize Swiper with proper configuration
+    const swiper = new Swiper('.hero.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        }
+      },
+      navigation: {
+        nextEl: '.nextHero',
+        prevEl: '.prevHero'
+      },
+      on: {
+        init: function () {
+          // Add active class to first dot
+          const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+          if (bullets.length > 0) {
+            bullets[0].classList.add('active');
+          }
+        },
+        slideChange: function () {
+          // Update active dot
+          const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+          bullets.forEach((bullet, index) => {
+            bullet.classList.toggle('active', index === this.activeIndex);
+          });
+        }
+      }
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    function openModal(item) {
+        if (!item) return;
+        
+        modalContent.innerHTML = `
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <img src="${item.poster}" alt="poster" style="width:100px;border-radius:8px;flex-shrink:0">
+            <div>
+              <h2 style="margin:0 0 8px">${item.title} 
+                <span style='color:var(--muted);font-weight:600'>(${item.year})</span>
+              </h2>
+      
+              <div style="color:var(--muted);margin-bottom:12px">${item.tagline}</div>
+              <p style="color:var(--muted);margin-top:0">${item.desc}</p>
+      
+              <div style="margin-top:12px;display:flex;gap:8px">
+                <a href="/watch/${item.type}/${item.id}/1/1" class="btn" style="text-decoration: none;">▶ Play</a>
+              </div>
+            </div>
+          </div>
+        `;
+    
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Event delegation for hero buttons and cards
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action="details"]');
+      const card = e.target.closest('.card');
+      
+      let item = null;
+      
+      if (btn) {
+        const id = btn.dataset.id;
+        const slide = document.querySelector(`.hero__slide[data-id="${id}"]`);
+        if (slide) {
+          item = {
+            id,
+            title: slide.dataset.title,
+            year: slide.dataset.year,
+            tagline: slide.dataset.tagline,
+            desc: slide.dataset.desc,
+            poster: slide.dataset.poster,
+            type: slide.dataset.type || 'movie',
+          };
+        }
+      } else if (card) {
+        const id = card.dataset.id;
+        item = {
+          id,
+          title: card.dataset.title,
+          year: card.dataset.year,
+          tagline: card.dataset.tagline,
+          desc: card.dataset.desc,
+          poster: card.dataset.poster,
+          type: card.dataset.type || 'movie',
+        };
+      }
+      
+      if (item) {
+        openModal(item);
+      }
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        const rows = ['row-sliders', 'row-new', 'row-movie', 'row-tv', 'row-populate'];
+        
+        rows.forEach(rowId => {
+          const container = document.getElementById(rowId);
+          if (container) {
+            Array.from(container.children).forEach(card => {
+              const title = card.querySelector('.meta div')?.textContent.toLowerCase() || '';
+              card.style.display = title.includes(query) ? '' : 'none';
+            });
+          }
+        });
+      });
+    }
+
+    // Small accessibility: focus outline
+    document.addEventListener('keyup', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('show-focus');
+      }
+    });
+
+    // Add keyboard navigation for carousel
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        swiper.slidePrev();
+      } else if (e.key === 'ArrowRight') {
+        swiper.slideNext();
+      }
+    });
+    
+    document.getElementById('btnSearch').addEventListener('click', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      window.location.href = "/film/search?query="+query
+    })
+  </script>
+</body>
+</html>

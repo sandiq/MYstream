@@ -1,0 +1,36 @@
+{
+  "name": "blue-vie",
+  "version": "1.0.0",
+  "description": "stream you'r fav film, movie, and serial tv",
+  "keywords": [
+    "film",
+    "movie",
+    "tv",
+    "web",
+    "stream"
+  ],
+  "license": "MIT",
+  "author": "NdyZz",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "nodemon index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "compression": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "ssl-express-www": "^3.2.1",
+    "url": "^0.11.4"
+  }
+}
