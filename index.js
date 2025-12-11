@@ -79,7 +79,7 @@ app.set('json spaces', 2);
 app.use((req, res, next) => {
   const token = jwt.sign({ apikey: process.env.APIKEY }, process.env.SECRETKEY, { expiresIn: '1h' });
   res.cookie('token', token, {
-    httpOnly: true,
+    httpsOnly: true,
     secure: true,
     maxAge: 3600000 // 1 jam
   });
