@@ -86,9 +86,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.disable('set-cookie');
+
 // Homepage
 app.get('/', async(req, res) => {
-  app.disable('set-cookie');
   const data = await getMovies()
   const data2 = await getShows()
   const data3 = await getPopulate()
