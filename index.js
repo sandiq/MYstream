@@ -6,15 +6,12 @@ import expressLayout from 'express-ejs-layouts';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import secure from 'ssl-express-www';
-import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import jwt from 'jsonwebtoken';
 
 import helmet from 'helmet';
 import csrf from 'csurf';
-import { getMovies, filmInfo, getShows, getPopulate, searchFilm, getGenresById } from './lib/stream.js'
-
-dotenv.config();
+import { getMovies, filmInfo, getShows, getPopulate, searchFilm, getGenresById } from './lib/stream.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
