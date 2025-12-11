@@ -1,5 +1,5 @@
 {
-  "name": "blue-vie",
+  "name": "mystream",
   "version": "1.0.0",
   "description": "stream you'r fav film, movie, and serial tv",
   "keywords": [
@@ -23,7 +23,6 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "csurf": "^1.11.0",
-    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
     "express-ejs-layouts": "^2.5.1",
