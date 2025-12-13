@@ -119,18 +119,20 @@ app.get('/watch/:type/:id/:season/:episode', verifyToken, async (req, res) => {
 });
 
 app.get('/film/search', verifyToken, async (req, res) => {
-  const { query, page } = req.query;
-  let {results, total_pages, total_results} = await searchFilm(query, page||1)
+  let { query, page=1 } = req.query;
+  page = parseInt(page) || 1;
+  if (page < 1) page = 1;
+  let {results, total_pages, total_results} = await searchFilm(query, page)
   for (let item of results) {
     item.genres = await getGenresById(item.genre_ids);
 }
   res.render('search', {
-    currentPage: page||1,
+    currentPage: page,
     query,
     total_results,
     total_pages,
     results,
-    layout: 'search',
+    layout: 'search'
   });
 });
 
